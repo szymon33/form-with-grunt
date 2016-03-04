@@ -5,6 +5,97 @@ module.exports = (grunt) ->
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
 
-  # Default task(s).
-  grunt.registerTask('default', [])
+    #uglify:     
+    #  dist:
+    #    src: ['js/libs/*' 'js/app.js'] # input
+    #    dest: 'javascripts/global.min.js' #output
+    #  
+    #
 
+    copy:
+      jquery:
+        files: 
+          [
+            { expand: true, cwd: 'bower_components/jquery/dist/', src: ['jquery.min.js', 'jquery.min.map'], dest: 'dist/js/' }
+          ]
+      foundation:
+       files:
+         [
+           { expand: true, cwd: 'bower_components/foundation/js/', src: 'foundation.min.js', dest: 'dist/js/' }
+           { expand: true, cwd: 'bower_components/modernizr/', src: 'modernizr.js', dest: 'dist/js/' }
+         ]
+      # fontawsome:
+      #   files:
+      #     [
+      #       { cwd: 'bower_components/font-awesome/css/', expand: true, src: 'font-awesome.css', dest: 'dist/stylesheets/', filter: 'isFile' }
+      #       { expand: true, dot: true, cwd: 'bower_components/font-awesome', src: ['fonts/*.*'], dest: 'dist/' }
+      #     ]
+      # fonts:
+      #   files:
+      #     [
+      #       cwd: 'fonts/'
+      #       expand: true
+      #       src: '*.*'
+      #       dest: 'dist/fonts/'
+      #       filter: 'isFile' 
+
+    sass:
+      dist:
+        files: [
+          expand: true
+          cwd: 'scss'
+          src: ['*.scss', '*.sass', '!_*.scss', '!_*.sass']
+          dest: 'dist/stylesheets'
+          ext: '.css'
+        ]    
+
+    haml:
+      dist:
+        files: [
+          expand: true
+          cwd: 'templates'
+          src: ['*.haml']
+          dest: 'dist'
+          ext: '.html'
+        ]
+
+    coffee:
+      glob_to_multiple:
+        expand: true
+        flatten: true
+        cwd: 'coffee'
+        src: ['*.coffee']
+        dest: 'dist/js'
+        ext: '.js'    
+
+    watch: 
+      options:
+        livereload: true
+        spawn: false
+      
+      js:
+        files: 'coffee/*.coffee'
+        tasks: ['coffee']
+      
+      sass:
+        files: 'scss/*.scss'
+        tasks: ['scss']
+      
+      templates:
+        files: 'templates/**/*.haml'
+        tasks: ['haml']
+
+      copy:
+        files: 'bower_components/bootstrap/dist/**/*'
+        tasks: ['copy']
+
+  grunt.loadNpmTasks('grunt-contrib-copy')
+  grunt.loadNpmTasks('grunt-contrib-sass')
+  grunt.loadNpmTasks('grunt-contrib-coffee')
+  grunt.loadNpmTasks('grunt-contrib-uglify')
+  grunt.loadNpmTasks('grunt-contrib-haml')
+
+  grunt.loadNpmTasks('grunt-contrib-watch')
+
+  # Default task(s).
+  grunt.registerTask('default', ['copy','coffee', 'sass', 'haml'])
