@@ -1,20 +1,20 @@
 # Gruntfile
-module.exports = (grunt) ->  
+module.exports = (grunt) ->
 
   # Project configuration.
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
 
-    #uglify:     
+    #uglify:
     #  dist:
     #    src: ['js/libs/*' 'js/app.js'] # input
     #    dest: 'javascripts/global.min.js' #output
-    #  
+    #
     #
 
     copy:
       jquery:
-        files: 
+        files:
           [
             { expand: true, cwd: 'bower_components/jquery/dist/', src: ['jquery.min.js', 'jquery.min.map'], dest: 'dist/js/' }
           ]
@@ -37,7 +37,7 @@ module.exports = (grunt) ->
       #       expand: true
       #       src: '*.*'
       #       dest: 'dist/fonts/'
-      #       filter: 'isFile' 
+      #       filter: 'isFile'
 
     sass:
       dist:
@@ -47,14 +47,16 @@ module.exports = (grunt) ->
           src: ['*.scss', '*.sass', '!_*.scss', '!_*.sass']
           dest: 'dist/stylesheets'
           ext: '.css'
-        ]    
+        ]
 
-    haml:
+    slim:
+      options:
+        pretty: true
       dist:
         files: [
           expand: true
           cwd: 'templates'
-          src: ['*.haml']
+          src: ['*.slim', '!_*.slim']
           dest: 'dist'
           ext: '.html'
         ]
@@ -66,24 +68,24 @@ module.exports = (grunt) ->
         cwd: 'coffee'
         src: ['*.coffee']
         dest: 'dist/js'
-        ext: '.js'    
+        ext: '.js'
 
-    watch: 
+    watch:
       options:
         livereload: true
         spawn: false
-      
+
       js:
         files: 'coffee/*.coffee'
         tasks: ['coffee']
-      
+
       sass:
         files: 'scss/*.scss'
         tasks: ['scss']
-      
+
       templates:
-        files: 'templates/**/*.haml'
-        tasks: ['haml']
+        files: 'templates/**/*.slim'
+        tasks: ['slim']
 
       copy:
         files: 'bower_components/bootstrap/dist/**/*'
@@ -93,9 +95,9 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks('grunt-contrib-sass')
   grunt.loadNpmTasks('grunt-contrib-coffee')
   grunt.loadNpmTasks('grunt-contrib-uglify')
-  grunt.loadNpmTasks('grunt-contrib-haml')
+  grunt.loadNpmTasks('grunt-slim')
 
   grunt.loadNpmTasks('grunt-contrib-watch')
 
   # Default task(s).
-  grunt.registerTask('default', ['copy','coffee', 'sass', 'haml'])
+  grunt.registerTask('default', ['copy','coffee', 'sass', 'slim'])
