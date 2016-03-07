@@ -23,6 +23,7 @@ module.exports = (grunt) ->
          [
            { expand: true, cwd: 'bower_components/foundation/js/', src: 'foundation.min.js', dest: 'dist/js/' }
            { expand: true, cwd: 'bower_components/modernizr/', src: 'modernizr.js', dest: 'dist/js/' }
+           { expand: true, cwd: 'bower_components/foundation/scss/foundation/', src: '_functions.scss', dest: 'scss/foundation/' }
          ]
       # fontawsome:
       #   files:
