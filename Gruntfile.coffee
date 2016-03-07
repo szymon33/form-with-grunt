@@ -30,14 +30,13 @@ module.exports = (grunt) ->
       #       { cwd: 'bower_components/font-awesome/css/', expand: true, src: 'font-awesome.css', dest: 'dist/stylesheets/', filter: 'isFile' }
       #       { expand: true, dot: true, cwd: 'bower_components/font-awesome', src: ['fonts/*.*'], dest: 'dist/' }
       #     ]
-      # fonts:
-      #   files:
-      #     [
-      #       cwd: 'fonts/'
-      #       expand: true
-      #       src: '*.*'
-      #       dest: 'dist/fonts/'
-      #       filter: 'isFile'
+      fonts:
+        files: [
+            cwd: 'fonts'
+            expand: true
+            src: '*.*'
+            dest: 'dist/fonts/'
+          ]
 
     sass:
       dist:
@@ -88,7 +87,7 @@ module.exports = (grunt) ->
         tasks: ['slim']
 
       copy:
-        files: 'bower_components/bootstrap/dist/**/*'
+        files: ['bower_components/bootstrap/dist/**/*', 'fonts/*']
         tasks: ['copy']
 
   grunt.loadNpmTasks('grunt-contrib-copy')
