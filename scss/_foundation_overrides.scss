@@ -1,0 +1,15 @@
+// Zurb Foundation overrides
+
+nav.top-bar {
+  .top-bar-section li.active:not(.has-form) a:not(.button) { 
+    background: transparent; 
+    text-decoration: underline;
+  }
+
+  .top-bar-section li:not(.has-form) a:not(.button) {
+    &:hover {
+      background: transparent;
+      text-decoration: underline;
+    }
+  }
+}

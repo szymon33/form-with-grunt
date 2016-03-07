@@ -1,3 +1,10 @@
+nav.top-bar .top-bar-section li.active:not(.has-form) a:not(.button) {
+  background: transparent;
+  text-decoration: underline; }
+nav.top-bar .top-bar-section li:not(.has-form) a:not(.button):hover {
+  background: transparent;
+  text-decoration: underline; }
+
 meta.foundation-version {
   font-family: "/5.5.3/"; }
 

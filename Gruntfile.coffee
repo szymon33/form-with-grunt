@@ -81,7 +81,7 @@ module.exports = (grunt) ->
 
       sass:
         files: 'scss/*.scss'
-        tasks: ['scss']
+        tasks: ['sass']
 
       templates:
         files: 'templates/**/*.slim'
