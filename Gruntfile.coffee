@@ -18,13 +18,19 @@ module.exports = (grunt) ->
           [
             { expand: true, cwd: 'bower_components/jquery/dist/', src: ['jquery.min.js', 'jquery.min.map'], dest: 'dist/js/' }
           ]
+
       foundation:
-       files:
-         [
+       files: [
            { expand: true, cwd: 'bower_components/foundation/js/', src: 'foundation.min.js', dest: 'dist/js/' }
            { expand: true, cwd: 'bower_components/modernizr/', src: 'modernizr.js', dest: 'dist/js/' }
            { expand: true, cwd: 'bower_components/foundation/scss/foundation/', src: '_functions.scss', dest: 'scss/foundation/' }
          ]
+      images:
+        files:
+          [
+            { expand: true, src: 'images/*.*', dest: 'dist/' }
+          ]
+
       # fontawsome:
       #   files:
       #     [
