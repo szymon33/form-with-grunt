@@ -24,19 +24,19 @@ module.exports = (grunt) ->
            { expand: true, cwd: 'bower_components/foundation/js/', src: 'foundation.min.js', dest: 'dist/js/' }
            { expand: true, cwd: 'bower_components/modernizr/', src: 'modernizr.js', dest: 'dist/js/' }
            { expand: true, cwd: 'bower_components/foundation/scss/foundation/', src: '_functions.scss', dest: 'scss/foundation/' }
-         ]
+          ]
+
       images:
-        files:
-          [
+        files: [
             { expand: true, src: 'images/*.*', dest: 'dist/' }
           ]
 
-      # fontawsome:
-      #   files:
-      #     [
-      #       { cwd: 'bower_components/font-awesome/css/', expand: true, src: 'font-awesome.css', dest: 'dist/stylesheets/', filter: 'isFile' }
-      #       { expand: true, dot: true, cwd: 'bower_components/font-awesome', src: ['fonts/*.*'], dest: 'dist/' }
-      #     ]
+      fontawsome:
+        files: [
+            { expand: true, cwd: 'bower_components/font-awesome', src: 'fonts/*.*', dest: 'dist/' }
+            { expand: true, cwd: 'bower_components/font-awesome/scss', src: ['**'], dest: 'scss/font-awesome/' }
+          ]
+
       fonts:
         files: [
             cwd: 'fonts'
@@ -106,4 +106,4 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks('grunt-contrib-watch')
 
   # Default task(s).
-  grunt.registerTask('default', ['copy','coffee', 'sass', 'slim'])
+  grunt.registerTask('default', ['copy','sass', 'coffee', 'slim'])
