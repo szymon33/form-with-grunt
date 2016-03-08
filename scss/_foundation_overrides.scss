@@ -5,6 +5,13 @@ $topbar-link-bg-active: none;
 $topbar-link-bg-hover: none;
 $topbar-link-bg-active-hover: none;
 
+body {
+  button.small, .button.small {
+    padding: 0.625em 1.25em 0.6875em 1.25em;
+    font-size: 0.8125em;
+  }
+}
+
 nav.top-bar {
   .top-bar-section li:not(.has-form).active a:not(.button) {
     text-decoration: underline;
@@ -20,6 +27,12 @@ nav.top-bar {
 }
 
 nav.top-bar li.toggle-topbar.menu-icon {
-  left: 0px;
+  position: absolute;
+  left: 0;
   right: auto;
+  top: 0;
+}
+
+li.name {
+  float: left;
 }
