@@ -41,13 +41,35 @@ nav.top-bar {
 }
 
 //
-// Secton hero
+// Header
 //
 
-section.hero {
+header {
+  color: white;
+  font-size: 40px;
+
   background: url('../images/background_photo.png') no-repeat 0 0 scroll;
   background-size: cover;
   background-position: center center;
+
+  .hero {
+    h1 {
+      color: white;
+      line-height: 1em;
+      font-size: 60px;
+    }
+
+
+    h2 {
+      color: white;
+      line-height: 1em;
+      font-size: 30px;
+    }
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 30px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
 }
 
 //
@@ -57,6 +79,10 @@ section.hero {
 section.apply-form {
   i.fa {
     margin-right: 1em;
+  }
+
+  label[for='sendmecopy'] {
+    margin-right: 0;
   }
 }
 
@@ -90,7 +116,7 @@ footer.footer {
     -webkit-box-shadow: 0px 0px 2px balck;
     box-shadow: 0px 0px 2px black;
     padding: 0.4375em;
-    margin-right: 0.4375em;
+    margin-right: 0.5em;
     min-width: 1.875em;
     text-align: center;
   }
@@ -114,4 +140,8 @@ button.file-upload {
     opacity: 0;
     height: 100%;
     width: 100%;  }
+}
+
+.no-padding-right {
+  padding-right: 0 !important;
 }
