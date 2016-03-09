@@ -3,3 +3,4 @@
 *.DS_Store
 /stylesheets/*
 /scss/foundation/*
+/scss/font-awesome/*
