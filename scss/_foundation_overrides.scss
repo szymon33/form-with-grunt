@@ -9,35 +9,5 @@ $topbar-bg-color: black;
 $topbar-link-bg-active: black;
 $topbar-link-bg-hover: black;
 $topbar-link-bg-active-hover: black;
-
-body {
-  button.small, .button.small {
-    padding: 0.625em 1.25em 0.6875em 1.25em;
-    font-size: 0.8125em;
-  }
-}
-
-nav.top-bar {
-  .top-bar-section li:not(.has-form).active a:not(.button) {
-    text-decoration: underline;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-  .top-bar-section li:not(.has-form) a:not(.button) {
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-
-nav.top-bar li.toggle-topbar.menu-icon {
-  position: absolute;
-  left: 0;
-  right: auto;
-  top: 0;
-}
-
-li.name {
-  float: left;
-}
+$button-bg-color: #005c9d;
+$input-placeholder-font-color: #a2a2a2;

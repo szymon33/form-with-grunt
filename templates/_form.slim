@@ -1,35 +1,30 @@
 section.apply-form
   .row
-    h2 APPLY FOR THE POSITION OF PURCHASING ASSISTANT
+    .large-12.columns
+      h2 APPLY FOR THE POSITION OF PURCHASING ASSISTANT
+    .large-12.columns
+      label.required.strong Personal details
+  .row
     .large-6.columns
-      label.required Personal details
-      .row
-        .large-12.columns
-          input type="text" name="firstname" placeholder="First Name" required=true pattern="[a-zA-Z]+"
-      .row
-        .large-12.columns
-          input type="text" name="city" placeholder="City" required=true
-      .row
-        .large-12.columns
-          input type="email" name="email" placeholder="E-mail" required=true
-      .row
-        .large-12.columns
-          label.required Your motivation
-          textarea placeholder="Write here" required=true
-      .row
-        .large-12.columns < Back to job description
+      input type="text" name="firstname" placeholder="First Name" required=true pattern="[a-zA-Z]+"
     .large-6.columns
-      .row
-        .large-12.columns
-          input type="text" name="lastname" placeholder="Last Name" required=true
-      .row
-        .large-12.columns
-          input type="text" name="country" placeholder="Country" required=true
-      .row
-        .large-12.columns
-          input type="tel" name="phone" placeholder="Phone" required=true
-
-      label Attach your documents (pdf, doc(x), jpg max. 4Mb)
+      input type="text" name="lastname" placeholder="Last Name" required=true
+  .row
+    .large-6.columns
+      input type="text" name="city" placeholder="City" required=true
+    .large-6.columns
+      input type="text" name="country" placeholder="Country" required=true
+  .row
+    .large-6.columns
+      input type="email" name="email" placeholder="E-mail" required=true
+    .large-6.columns
+      input type="tel" name="phone" placeholder="Phone" required=true
+  .row
+    .large-6.columns
+      label.required.strong Your motivation
+      textarea placeholder="Write here" required=true
+    .large-6.columns
+      label.strong Attach your documents (pdf, doc(x), jpg max. 4Mb)
       .row.resume
         .large-4.columns Resume
         .large-4.columns
@@ -57,6 +52,10 @@ section.apply-form
             | UPLOAD
         .large-4.columns
           button.small.expand href="#" DROPBOX
+  .row.footer
+    .large-6.columns
+      a href="#" < Back to job description
+    .large-6.columns
       .row
         .large-4.columns
           input id="sendmecopy" type="checkbox"
