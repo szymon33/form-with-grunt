@@ -9,99 +9,199 @@
     <script src="js/modernizr.js"></script>
   </head>
   <body>
-    <nav class="top-bar" data-topbar="" role="navigation">
-      <ul class="title-area">
-        <li class="name">
-          <h1>
-            <a href="#">LOGO</a>
-          </h1>
-        </li>
-        <li class="toggle-topbar menu-icon">
-          <a href="#"><span></span></a>
-        </li>
-      </ul>
-      <section class="top-bar-section">
-        <!--Right Nav Section-->
-        <ul class="right">
-          <!--Search | has-form wrapper-->
-          <li class="has-form">
-            <div class="row collapse">
-              <div class="large-9 small-9 columns">
-                <input placeholder="SEARCH FOR JOBS" type="text" />
-              </div>
-              <div class="large-3 small-3 columns">
-                <a class="alert button expand" href="#">S</a>
-              </div>
-            </div>
+    <div class="fixed">
+      <nav class="top-bar large" data-topbar="" role="navigation">
+        <ul class="title-area">
+          <li class="toggle-topbar menu-icon">
+            <a href="#"><span></span></a>
           </li>
-          <li class="has-form">
-            <a class="button">B</a>
+          <li class="name">
+            <h1 id="logo">
+              <a href="#">Form with Grunt</a>
+            </h1>
           </li>
         </ul>
-        <!--Left Nav Section-->
-        <ul class="left">
-          <li>
-            <a href="#">HOME</a>
-          </li>
-          <li class="active">
-            <a href="#">JOBS</a>
-          </li>
-          <li>
-            <a href="#">ABOUT</a>
-          </li>
-          <li>
-            <a href="#">DEPARTMENTS</a>
-          </li>
-          <li>
-            <a href="#">CONTACT</a>
-          </li>
-        </ul>
-      </section>
-    </nav><section class="hero">
-      <div class="row intro">
-        <div class="small-centered medium-uncentered medium-12 large-12 columns bg-hero">
-          <h1 class="text-center">
-            PURCHAISING ASSISTANT
-          </h1>
-          <p class="text-center">
-            AMSTERDAM, THE NETHERDLANDS
-          </p>
+        <section class="top-bar-section">
+          <!--Right Nav Section-->
+          <ul class="right">
+            <!--Search | has-form wrapper-->
+            <li class="has-form">
+              <div class="row collapse search">
+                <div class="large-9 small-9 columns">
+                  <input placeholder="SEARCH FOR JOBS" type="text" />
+                </div>
+                <div class="large-3 small-3 columns">
+                  <a class="button expand search" href="#"><i class="fa fa-search"></i></a>
+                </div>
+              </div>
+            </li>
+            <li class="has-form">
+              <a class="button suitcase"><i class="fa fa-suitcase"></i><span>1</span></a>
+            </li>
+          </ul>
+          <!--Left Nav Section-->
+          <ul class="left">
+            <li>
+              <a href="#">HOME</a>
+            </li>
+            <li class="active">
+              <a href="#">JOBS</a>
+            </li>
+            <li>
+              <a href="#">ABOUT</a>
+            </li>
+            <li>
+              <a href="#">DEPARTMENTS</a>
+            </li>
+            <li>
+              <a href="#">CONTACT</a>
+            </li>
+          </ul>
+        </section>
+      </nav>
+    </div><header>
+      <div class="row">
+        <div class="small-centered medium-uncentered medium-12 large-12 columns">
+          <div class="hero small-12 large-8 small-centered large-centered columns">
+            <h1 class="text-center">
+              PURCHAISING ASSISTANT
+            </h1>
+            <h2 class="text-center">
+              AMSTERDAM, THE&nbsp;NETHERDLANDS
+            </h2>
+          </div>
         </div>
       </div>
-    </section><div class="row">
-      <div class="large-6 columns">
-        <h3>
-          APPLICATION PROCEDURE
-        </h3>
-        <ul>
-          <li>
-            Sed ut perspiciatis, unde omnis iste natus error
-          </li>
-          <li>
-            Nemo enim ipsam voluptatem
-          </li>
-          <li>
-            At vero eos et accusamus et iusto odio dignissimos
-          </li>
-          <li>
-            Lorem ipsum ad his scripta blandit partiendo
-          </li>
-        </ul>
+    </header><section class="apply-form">
+  <div class="row">
+    <div class="large-12 columns">
+      <h2>
+        APPLY FOR THE POSITION OF PURCHASING ASSISTANT
+      </h2>
+    </div>
+    <div class="large-12 columns">
+      <label class="required strong">Personal details</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-6 large-6 columns">
+      <input name="firstname" pattern="[a-zA-Z]+" placeholder="First Name" required="" type="text" />
+    </div>
+    <div class="medium-6 large-6 columns">
+      <input name="lastname" placeholder="Last Name" required="" type="text" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-6 large-6 columns">
+      <input name="city" placeholder="City" required="" type="text" />
+    </div>
+    <div class="medium-6 large-6 columns">
+      <input name="country" placeholder="Country" required="" type="text" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-6 large-6 columns">
+      <input name="email" placeholder="E-mail" required="" type="email" />
+    </div>
+    <div class="medium-6 large-6 columns">
+      <input name="phone" placeholder="Phone" required="" type="tel" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 columns">
+      <label class="required strong">Your motivation</label><textarea placeholder="Write here" required=""></textarea>
+    </div>
+    <div class="large-6 columns">
+      <label class="strong">Attach your documents (pdf, doc(x), jpg max. 4Mb)</label>
+      <div class="row resume">
+        <div class="small-12 large-4 columns">
+          Resume
+        </div>
+        <div class="small-6 large-4 columns">
+          <button class="small expand file-upload"><input class="file-input" name="resume" type="file" /><i class="fa fa-desktop"></i>UPLOAD</button>
+        </div>
+        <div class="small-6 large-4 columns">
+          <button class="small expand" href="#">DROPBOX</button>
+        </div>
       </div>
-      <div class="large-6 columns">
-        <h3>
-          GOT A QUESTION?
-        </h3>
-        <p>
-          Please contact recrutment<br />T. +31 20 123 456 78<br />Or <a href="mailto:foo@bar.com" target="_blank">Send us an email</a>
-        </p>
+      <div class="row portfolio">
+        <div class="small-12 large-4 columns">
+          Portfolio
+        </div>
+        <div class="small-6 large-4 columns">
+          <button class="small expand file-upload"><input class="file-input" name="resume" type="file" /><i class="fa fa-desktop"></i>UPLOAD</button>
+        </div>
+        <div class="small-6 large-4 columns">
+          <button class="small expand" href="#">DROPBOX</button>
+        </div>
       </div>
-    </div><footer class="footer">
+      <div class="row photo">
+        <div class="small-12 large-4 columns">
+          Photo
+        </div>
+        <div class="small-6 large-4 columns">
+          <button class="small file-upload expand"><input class="file-input" name="resume" type="file" /><i class="fa fa-desktop"></i>UPLOAD</button>
+        </div>
+        <div class="small-6 large-4 columns">
+          <button class="small expand" href="#">DROPBOX</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row footer">
+    <div class="medium-6 large-6 columns hide-for-small-only">
+      <a href="#">< Back to job description</a>
+    </div>
+    <div class="medium-6 small-12 large-6 columns">
       <div class="row">
+        <div class="small-6 large-4 columns">
+          <input id="sendmecopy" type="checkbox"><label for="sendmecopy">Send me a copy</label></input>
+        </div>
+        <div class="small-6 large-8 columns">
+          <submit class="button small expand">APPLY FOR THIS JOB</submit>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><section class="readmore">
+      <div class="row">
+        <div class="medium-6 large-6 columns">
+          <h3>
+            APPLICATION PROCEDURE
+          </h3>
+          <ul>
+            <li>
+              Sed ut perspiciatis, unde omnis iste natus error
+            </li>
+            <li>
+              Nemo enim ipsam voluptatem
+            </li>
+            <li>
+              At vero eos et accusamus et iusto odio dignissimos
+            </li>
+            <li>
+              Lorem ipsum ad his scripta blandit partiendo
+            </li>
+          </ul>
+        </div>
+        <div class="medium-6 large-6 columns">
+          <h3>
+            GOT A QUESTION?
+          </h3>
+          <p>
+            Please contact recrutment<br />T. +31 20 123 456 78<br />Or <a class="send-us-email" href="mailto:foo@bar.com" target="_blank">Send us an email</a>
+          </p>
+        </div>
+        <div class="large-12 columns">
+          <a class="continue-reading" href="#">Continiue reading</a>
+        </div>
+      </div>
+    </section><footer class="footer">
+      <div class="row container">
         <div class="medium-3 small-6 columns">
           <ul class="no-bullet">
-            <li>
-              <strong>JOBS AT</strong>
+            <li class="header">
+              JOBS AT
             </li>
             <li>
               <a href="#">Home</a>
@@ -119,8 +219,8 @@
         </div>
         <div class="medium-3 small-6 columns">
           <ul class="no-bullet">
-            <li>
-              <strong>INFORMATION</strong>
+            <li class="header">
+              INFORMATION
             </li>
             <li>
               <a href="#">F.A.Q.</a>
@@ -136,50 +236,52 @@
             </li>
           </ul>
         </div>
-        <div class="medium-3 small-6 columns">
+        <div class="medium-3 small-6 columns no-padding-right">
           <ul class="no-bullet">
-            <li>
-              <strong>FOLLOW US</strong>
+            <li class="header">
+              FOLLOW US
             </li>
             <div class="row">
-              <ul class="no-bullet large-6 columns">
-                <li>
-                  <a href="#">Newsletter</a>
-                </li>
-                <li>
-                  <a href="#">Instagram</a>
-                </li>
-                <li>
-                  <a href="#">Twitter</a>
-                </li>
-                <li>
-                  <a href="#">Tumbir</a>
-                </li>
-                <li>
-                  <a href="#">LinedIn</a>
-                </li>
-              </ul>
-              <ul class="no-bullet large-6 columns">
-                <li>
-                  <a href="#">Facebook</a>
-                </li>
-                <li>
-                  <a href="#">Pinterest</a>
-                </li>
-                <li>
-                  <a href="#">YouTube</a>
-                </li>
-                <li>
-                  <a href="#">Google+</a>
-                </li>
+              <ul class="no-bullet">
+                <div class="large-6 columns">
+                  <li>
+                    <a href="#"><i class="fa fa-envelope"></i>Newsletter</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-instagram"></i>Instagram</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-twitter"></i>Twitter</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-tumblr"></i>Tumblr</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-linkedin"></i>LinedIn</a>
+                  </li>
+                </div>
+                <div class="large-6 columns">
+                  <li>
+                    <a href="#"><i class="fa fa-facebook"></i>Facebook</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-pinterest"></i>Pinterest</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-youtube"></i>YouTube</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-google"></i>Google+</a>
+                  </li>
+                </div>
               </ul>
             </div>
           </ul>
         </div>
         <div class="medium-3 small-6 columns">
           <ul class="no-bullet">
-            <li>
-              <strong>JOB ALERT</strong>
+            <li class="header">
+              JOB ALERT
             </li>
             <li>
               <a href="#">Subsribe to our job alert</a>
