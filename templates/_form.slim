@@ -5,19 +5,19 @@ section.apply-form
     .large-12.columns
       label.required.strong Personal details
   .row
-    .large-6.columns
+    .medium-6.large-6.columns
       input type="text" name="firstname" placeholder="First Name" required=true pattern="[a-zA-Z]+"
-    .large-6.columns
+    .medium-6.large-6.columns
       input type="text" name="lastname" placeholder="Last Name" required=true
   .row
-    .large-6.columns
+    .medium-6.large-6.columns
       input type="text" name="city" placeholder="City" required=true
-    .large-6.columns
+    .medium-6.large-6.columns
       input type="text" name="country" placeholder="Country" required=true
   .row
-    .large-6.columns
+    .medium-6.large-6.columns
       input type="email" name="email" placeholder="E-mail" required=true
-    .large-6.columns
+    .medium-6.large-6.columns
       input type="tel" name="phone" placeholder="Phone" required=true
   .row
     .large-6.columns
@@ -26,39 +26,39 @@ section.apply-form
     .large-6.columns
       label.strong Attach your documents (pdf, doc(x), jpg max. 4Mb)
       .row.resume
-        .large-4.columns Resume
-        .large-4.columns
+        .small-12.large-4.columns Resume
+        .small-6.large-4.columns
           button.small.expand.file-upload
             input.file-input type="file" name="resume"
             i.fa.fa-desktop
             | UPLOAD
-        .large-4.columns
+        .small-6.large-4.columns
           button.small.expand href="#" DROPBOX
       .row.portfolio
-        .large-4.columns Portfolio
-        .large-4.columns
+        .small-12.large-4.columns Portfolio
+        .small-6.large-4.columns
           button.small.expand.file-upload
             input.file-input type="file" name="resume"
             i.fa.fa-desktop 
             | UPLOAD
-        .large-4.columns
+        .small-6.large-4.columns
           button.small.expand href="#" DROPBOX
       .row.photo
-        .large-4.columns Photo
-        .large-4.columns
+        .small-12.large-4.columns Photo
+        .small-6.large-4.columns
           button.small.file-upload.expand
             input.file-input type="file" name="resume"
             i.fa.fa-desktop
             | UPLOAD
-        .large-4.columns
+        .small-6.large-4.columns
           button.small.expand href="#" DROPBOX
   .row.footer
-    .large-6.columns
+    .medium-6.large-6.columns.hide-for-small-only
       a href="#" < Back to job description
-    .large-6.columns
+    .medium-6.small-12.large-6.columns
       .row
-        .large-4.columns
+        .small-6.large-4.columns
           input id="sendmecopy" type="checkbox"
             label for="sendmecopy" Send me a copy
-        .large-8.columns
+        .small-6.large-8.columns
           submit.button.small.expand APPLY FOR THIS JOB

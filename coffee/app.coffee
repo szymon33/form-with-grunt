@@ -3,9 +3,9 @@
 $(document).foundation()
 
 # menu parallax
- ->
+jQuery ->
   $(document).on "scroll", ->
-    if $(document).scrollTop() > 100
+    if $(@).scrollTop() > 100
       $(".top-bar").removeClass("large").addClass("small")
     else
       $(".top-bar").removeClass("small").addClass("large")
