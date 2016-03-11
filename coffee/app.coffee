@@ -9,3 +9,8 @@ jQuery ->
       $(".top-bar").removeClass("large").addClass("small")
     else
       $(".top-bar").removeClass("small").addClass("large")
+
+# thank you for apply modal
+jQuery ->
+  $('#apply').click (event) ->
+    $('#thankYouModal').foundation('reveal', 'open')
