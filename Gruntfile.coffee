@@ -24,6 +24,7 @@ module.exports = (grunt) ->
            { expand: true, cwd: 'bower_components/foundation/js/', src: 'foundation.min.js', dest: 'dist/js/' }
            { expand: true, cwd: 'bower_components/modernizr/', src: 'modernizr.js', dest: 'dist/js/' }
            { expand: true, cwd: 'bower_components/foundation/scss/foundation/', src: '_functions.scss', dest: 'scss/foundation/' }
+           { expand: true, cwd: 'bower_components/foundation/js/foundation/', src: 'foundation.reveal.js', dest: 'dist/js/' }
           ]
 
       images:

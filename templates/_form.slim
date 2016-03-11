@@ -1,5 +1,5 @@
 section.apply-form
-  form action="/newaccount" method="post"
+  form action="/" method="post"
     .row
       .large-12.columns
         h2 APPLY FOR THE POSITION OF PURCHASING ASSISTANT
@@ -34,7 +34,7 @@ section.apply-form
               i.fa.fa-desktop
               | UPLOAD
           .small-6.large-4.columns
-            button.small.expand href="#" DROPBOX
+            button.dropbox-choose.small.expand href="#" DROPBOX
         .row.portfolio
           .small-12.large-4.columns Portfolio
           .small-6.large-4.columns
@@ -43,7 +43,7 @@ section.apply-form
               i.fa.fa-desktop 
               | UPLOAD
           .small-6.large-4.columns
-            button.small.expand href="#" DROPBOX
+            button.dropbox-choose.small.expand href="#" DROPBOX
         .row.photo
           .small-12.large-4.columns Photo
           .small-6.large-4.columns
@@ -52,7 +52,7 @@ section.apply-form
               i.fa.fa-desktop
               | UPLOAD
           .small-6.large-4.columns
-            button.small.expand href="#" DROPBOX
+            button.dropbox-choose.small.expand href="#" DROPBOX
     .row.footer
       .medium-6.large-6.columns.hide-for-small-only
         a href="#" < Back to job description
@@ -62,4 +62,4 @@ section.apply-form
             input id="sendmecopy" type="checkbox"
               label for="sendmecopy" Send me a copy
           .small-6.large-8.columns
-            button.small.expand type="submit" APPLY FOR THIS JOB
+            button.small.expand id="apply" APPLY FOR THIS JOB
