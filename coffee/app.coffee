@@ -13,4 +13,16 @@ jQuery ->
 # thank you for apply modal
 jQuery ->
   $('#apply').click (event) ->
-    $('#thankYouModal').foundation('reveal', 'open')
+    $('form[validator]').find('input, textarea').each (index, value) ->
+      $(value).trigger('blur')
+
+    errors = $("form[validator]").find(".custom-error")
+    if errors.length == 0
+      # this is just a simmulation. Message could be called from callback
+      txt = "Thank you for your application " + $("input[name=firstname]").val() + "!"
+      $('#thankYouModal').find('p.lead').text(txt)
+      $('#thankYouModal').foundation('reveal', 'open')
+    else
+      errors[0].focus()
+
+    event.preventDefault()

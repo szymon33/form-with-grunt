@@ -4723,9 +4723,9 @@ meta.foundation-mq-topbar {
     .top-bar.expanded .title-area {
       background: black; }
     .top-bar.expanded .toggle-topbar a {
-      color: #888888; }
+      color: white; }
       .top-bar.expanded .toggle-topbar a span::after {
-        box-shadow: 0 0 0 1px #888888, 0 7px 0 1px #888888, 0 14px 0 1px #888888; }
+        box-shadow: 0 0 0 1px white, 0 7px 0 1px white, 0 14px 0 1px white; }
     @media screen and (-webkit-min-device-pixel-ratio: 0) {
       .top-bar.expanded .top-bar-section .has-dropdown.moved > .dropdown,
       .top-bar.expanded .top-bar-section .dropdown {
@@ -6614,6 +6614,9 @@ li.name {
 nav.top-bar.small {
   height: 2.8125em;
   opacity: 0.9; }
+  @media only screen {
+    nav.top-bar.small {
+      opacity: initial; } }
 nav.top-bar.large {
   padding-top: 1em;
   height: 4.8125em; }
@@ -6676,9 +6679,9 @@ header {
 section.apply-form h2 {
   font-size: 1.875em;
   margin-top: 1em; }
-  @media only screen {
+  @media only screen and (max-width: 40em) {
     section.apply-form h2 {
-      font-size: 1.25em; } }
+      font-size: 1em; } }
 section.apply-form i.fa {
   margin-right: 1em; }
 section.apply-form label[for='sendmecopy'] {

@@ -1,7 +1,7 @@
 == Slim::Template.new('templates/_thankyou.slim').render
 
 section.apply-form
-  form action="/" method="post"
+  form method="post" novalidate=true validator=true
     .row
       .large-12.columns
         h2 APPLY FOR THE POSITION OF PURCHASING ASSISTANT
@@ -9,12 +9,13 @@ section.apply-form
         label.required.strong Personal details
     .row
       .medium-6.large-6.columns
-        input type="text" name="firstname" placeholder="First Name" required=true pattern="[a-zA-Z]+"
+        label
+          input type="text" name="firstname" placeholder="First Name" required=true
       .medium-6.large-6.columns
         input type="text" name="lastname" placeholder="Last Name" required=true
     .row
       .medium-6.large-6.columns
-        input type="text" name="city" placeholder="City" required=true
+        input type="text" name="address" placeholder="Address" required=true address=true
       .medium-6.large-6.columns
         input type="text" name="country" placeholder="Country" required=true
     .row
@@ -25,7 +26,7 @@ section.apply-form
     .row
       .large-6.columns
         label.required.strong Your motivation
-        textarea placeholder="Write here" required=true
+        textarea placeholder="Motivation" required=true
       .large-6.columns
         label.strong Attach your documents (pdf, doc(x), jpg max. 4Mb)
         .row.resume

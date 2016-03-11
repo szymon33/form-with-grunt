@@ -7,21 +7,22 @@
       li.name
         h1 id="logo"
           a href="#" Form with Grunt
+
     section.top-bar-section
       /! Right Nav Section
       ul.right
+        li.has-form.right
+          button.suitcase
+            i.fa.fa-suitcase
+            span 1
         /! Search | has-form wrapper
         li.has-form
           .row.collapse.search
-            .large-9.small-9.columns
-              input placeholder=("SEARCH FOR JOBS") type="text" /
-            .large-3.small-3.columns
-              a.button.expand.search href="#"
+            .large-10.small-10.columns
+              input placeholder=("SEARCH FOR JOBS") type="text"
+            .large-2.small-2.columns
+              a.button.postfix.search href="#"
                 i.fa.fa-search
-        li.has-form
-          a.button.suitcase
-            i.fa.fa-suitcase
-            span 1
       /! Left Nav Section
       ul.left
         li
