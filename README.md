@@ -53,6 +53,7 @@ On smaller screens and on mobile devices, the menu will slide in and out from th
 * Dropbox (link with Dropbox API)
 * popup message containing the name of candidate appears when submit form
 * parallax main menu (shrink)
+* Back to top link is an animation
 * custom (hardcoded) form validations, just to show some javascript.
 
 Address require somwere 5 digits as a code. Mockup doesn't include address field. So I replace City into address to keep is simple.

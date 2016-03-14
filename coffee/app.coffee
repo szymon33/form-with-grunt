@@ -2,7 +2,10 @@
 # Documentation can be found at: http://foundation.zurb.com/docs
 $(document).foundation()
 
+#
 # menu parallax
+#
+
 jQuery ->
   $(document).on "scroll", ->
     if $(@).scrollTop() > 100
@@ -10,7 +13,10 @@ jQuery ->
     else
       $(".top-bar").removeClass("small").addClass("large")
 
-# thank you for apply modal
+#
+# Thank you for apply modal
+#
+
 jQuery ->
   $('#apply').click (event) ->
     $('form[validator]').find('input, textarea').each (index, value) ->
@@ -26,3 +32,14 @@ jQuery ->
       errors[0].focus()
 
     event.preventDefault()
+
+#
+# Animate to top page
+#
+
+jQuery ->
+  $("#back-to-top").click (event) ->
+    event.preventDefault()
+    $('body,html').animate
+      scrollTop: 0
+    , 1000
