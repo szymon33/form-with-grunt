@@ -10,7 +10,7 @@
         },
         linkType: "preview",
         multiselect: false,
-        extensions: ['.pdf', '.doc', '.docx']
+        extensions: ['.pdf', '.doc', '.docx', '.rtf', '.txt']
       };
     }
   };
