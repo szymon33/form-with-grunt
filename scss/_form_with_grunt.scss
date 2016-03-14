@@ -212,10 +212,12 @@ section.readmore {
     right: 0;    
     
     padding: 1.2em;
-    width: 10em;
+    width: auto;
     text-align: center;
     background: $footer-bg;
   }
+
+  i { margin-left: 1em; }
 }
 
 footer.footer {
