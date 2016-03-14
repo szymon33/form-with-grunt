@@ -20,7 +20,7 @@ dropbox_options =
     # only be able to select files with these extensions. You may also specify
     # file types, such as "video" or "images" in the list. For more information,
     # see File types below. By default, all extensions are allowed.
-    extensions: ['.pdf', '.doc', '.docx']
+    extensions: ['.pdf', '.doc', '.docx', '.rtf', '.txt']
 
 jQuery ->
   $('.dropbox-choose').click (event) ->
