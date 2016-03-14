@@ -1,6 +1,6 @@
 # Challenge
 
-Your assignment is to create an application page that features a form that will allow the applicant to enter his or her personal details, provide a motivational letter and upload his or her CV. Based on .PSD mackuped below.
+Your assignment is to create an application page that features a form that will allow the applicant to enter his or her personal details, provide a motivational letter and upload his or her CV. Based on .PSD mockup below.
 
 ## The form
 
@@ -30,7 +30,7 @@ On smaller screens and on mobile devices, the menu will slide in and out from th
 
 [Click here to see live version](http://www.act.poznan.pl/eze)
 
-## Technlogy Stack
+## Technology Stack
 
 * HTML
 * SLIM
@@ -39,7 +39,7 @@ On smaller screens and on mobile devices, the menu will slide in and out from th
 * Javascript
 * Coffee Script
 * jQuery
-* Across­device/browser/platform conformity
+* Across ­device/browser/platform conformity
 * Responsiveness (small, medium, large)
 * Grunt
 * Bower
@@ -49,14 +49,14 @@ On smaller screens and on mobile devices, the menu will slide in and out from th
 
 * web font embedding (Lato)
 * font icons
-* responsive topbar with hamburger on the left
+* responsive top bar with hamburger on the left
 * Dropbox (link with Dropbox API)
 * popup message containing the name of candidate appears when submit form
 * parallax main menu (shrink)
 * Back to top link is an animation
 * custom (hardcoded) form validations, just to show some javascript.
 
-Address require somwere 5 digits as a code. Mockup doesn't include address field. So I replace City into address to keep is simple.
+Address require somewhere 5 digits as a code. Mockup doesn't include address field. So I replace City into address to keep is simple.
 
 ```
 /[\w,.\s]+[\d]{5}[\w,.\s]*/
@@ -70,3 +70,5 @@ E-mail has more complex validation
 Both address and e-mail has 2 validations. So if it is empty then 'required' validation works. When it is filled then validates via regular expression at once.
 
 ## Screenshots
+
+I stored some screenshots in [screenshots folder](docs/screenshots) proving the responsiveness.
