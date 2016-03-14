@@ -29,4 +29,13 @@
     });
   });
 
+  jQuery(function() {
+    return $("#back-to-top").click(function(event) {
+      event.preventDefault();
+      return $('body,html').animate({
+        scrollTop: 0
+      }, 1000);
+    });
+  });
+
 }).call(this);

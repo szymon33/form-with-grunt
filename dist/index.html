@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="Szymon" name="author" />
-    <title>Netwerven</title><title>Slim Examples</title>
+    <title>Netwerven</title>
     <link href="stylesheets/app.css" rel="stylesheet" />
     <script src="js/modernizr.js"></script>
   </head>
@@ -24,17 +24,17 @@
         <section class="top-bar-section">
           <!--Right Nav Section-->
           <ul class="right">
-            <li class="has-form right">
-              <button class="suitcase"><i class="fa fa-suitcase"></i><span>1</span></button>
+            <li class="right suitcase">
+              <a class="button" href="#"><i class="fa fa-suitcase"></i><span>1</span></a>
             </li>
             <!--Search | has-form wrapper-->
             <li class="has-form">
               <div class="row collapse search">
-                <div class="large-10 small-10 columns">
+                <div class="large-10 small-11 columns">
                   <input placeholder="SEARCH FOR JOBS" type="text" />
                 </div>
-                <div class="large-2 small-2 columns">
-                  <a class="button postfix search" href="#"><i class="fa fa-search"></i></a>
+                <div class="large-2 small-1 columns">
+                  <a class="button expand text-center" href="#"><i class="fa fa-search"></i></a>
                 </div>
               </div>
             </li>
@@ -63,16 +63,16 @@
       <div class="row">
         <div class="small-centered medium-uncentered medium-12 large-12 columns">
           <div class="hero small-12 large-8 small-centered large-centered columns">
-            <h1 class="text-center">
-              PURCHAISING ASSISTANT
-            </h1>
             <h2 class="text-center">
-              AMSTERDAM, THE&nbsp;NETHERDLANDS
+              PURCHAISING ASSISTANT
             </h2>
+            <h3 class="text-center">
+              AMSTERDAM, THE&nbsp;NETHERDLANDS
+            </h3>
           </div>
         </div>
       </div>
-    </header><div aria-hidden="true" aria-labelledby="Thank You For Apply" class="reveal-modal small" data-reveal="" id="thankYouModal" role="dialog">
+    </header><div aria-hidden="true" aria-labelledby="apply" class="reveal-modal small" data-reveal="" id="thankYouModal" role="dialog">
   <h2 id="modalTitle">
     Your data has been sent
   </h2>
@@ -128,45 +128,45 @@
           <div class="small-12 large-4 columns">
             Resume
           </div>
-          <div class="small-6 large-4 columns">
-            <button class="small expand file-upload"><input class="file-input" name="resume" type="file" /><i class="fa fa-desktop"></i>UPLOAD</button>
+          <div class="small-6 large-4 columns file-upload">
+            <button class="small expand"><i class="fa fa-desktop"></i>UPLOAD</button><input class="file-input" name="resume" tabindex="-1" type="file" />
           </div>
           <div class="small-6 large-4 columns">
-            <button class="dropbox-choose small expand" href="#">DROPBOX</button>
+            <a class="button dropbox-choose small expand" href="#">DROPBOX</a>
           </div>
         </div>
         <div class="row portfolio">
           <div class="small-12 large-4 columns">
             Portfolio
           </div>
-          <div class="small-6 large-4 columns">
-            <button class="small expand file-upload"><input class="file-input" name="resume" type="file" /><i class="fa fa-desktop"></i>UPLOAD</button>
+          <div class="small-6 large-4 columns file-upload">
+            <button class="small expand"><i class="fa fa-desktop"></i>UPLOAD</button><input class="file-input" name="resume" tabindex="-1" type="file" />
           </div>
           <div class="small-6 large-4 columns">
-            <button class="dropbox-choose small expand" href="#">DROPBOX</button>
+            <a class="button dropbox-choose small expand" href="#">DROPBOX</a>
           </div>
         </div>
         <div class="row photo">
           <div class="small-12 large-4 columns">
             Photo
           </div>
-          <div class="small-6 large-4 columns">
-            <button class="small file-upload expand"><input class="file-input" name="resume" type="file" /><i class="fa fa-desktop"></i>UPLOAD</button>
+          <div class="small-6 large-4 columns file-upload">
+            <button class="small expand"><i class="fa fa-desktop"></i>UPLOAD</button><input class="file-input" name="resume" tabindex="-1" type="file" />
           </div>
           <div class="small-6 large-4 columns">
-            <button class="dropbox-choose small expand" href="#">DROPBOX</button>
+            <a class="button dropbox-choose small expand" href="#">DROPBOX</a>
           </div>
         </div>
       </div>
     </div>
     <div class="row footer">
       <div class="medium-6 large-6 columns hide-for-small-only">
-        <a href="#">< Back to job description</a>
+        <a href="#" tabindex="-1">&lt; Back to job description</a>
       </div>
       <div class="medium-6 small-12 large-6 columns">
         <div class="row">
           <div class="small-6 large-4 columns">
-            <input id="sendmecopy" type="checkbox"><label for="sendmecopy">Send me a copy</label></input>
+            <input id="sendmecopy" type="checkbox" /><label for="sendmecopy">Send me a copy</label>
           </div>
           <div class="small-6 large-8 columns">
             <button class="small expand" id="apply">APPLY FOR THIS JOB</button>
@@ -177,7 +177,7 @@
   </form>
 </section><section class="readmore">
       <div class="row">
-        <div class="medium-6 large-6 columns">
+        <div class="small-6 columns">
           <h3>
             APPLICATION PROCEDURE
           </h3>
@@ -196,7 +196,7 @@
             </li>
           </ul>
         </div>
-        <div class="medium-6 large-6 columns">
+        <div class="small-6 columns">
           <h3>
             GOT A QUESTION?
           </h3>
@@ -204,13 +204,16 @@
             Please contact recrutment<br />T. +31 20 123 456 78<br />Or <a class="send-us-email" href="mailto:foo@bar.com" target="_blank">Send us an email</a>
           </p>
         </div>
-        <div class="large-12 columns">
+        <div class="small-12 columns">
           <a class="continue-reading" href="#">Continiue reading</a>
         </div>
       </div>
-    </section><footer class="footer">
+    </section><div class="show-for-large-up" id="back-to-top">
+      <a href="#">BACK TO TOP<i class="fa fa-caret-up"></i></a>
+    </div>
+    <footer class="footer">
       <div class="row container">
-        <div class="medium-3 small-6 columns">
+        <div class="large-3 medium-3 small-6 columns">
           <ul class="no-bullet">
             <li class="header">
               JOBS AT
@@ -229,7 +232,7 @@
             </li>
           </ul>
         </div>
-        <div class="medium-3 small-6 columns">
+        <div class="large-3 medium-3 small-6 columns">
           <ul class="no-bullet">
             <li class="header">
               INFORMATION
@@ -248,49 +251,47 @@
             </li>
           </ul>
         </div>
-        <div class="small-12 medium-3 columns no-padding-right">
-          <ul class="no-bullet">
-            <li class="header">
-              FOLLOW US
-            </li>
-            <div class="row">
-              <ul class="no-bullet">
-                <div class="small-6 columns">
-                  <li>
-                    <a href="#"><i class="fa fa-envelope"></i>Newsletter</a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-instagram"></i>Instagram</a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-twitter"></i>Twitter</a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-tumblr"></i>Tumblr</a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-linkedin"></i>LinedIn</a>
-                  </li>
-                </div>
-                <div class="small-6 columns">
-                  <li>
-                    <a href="#"><i class="fa fa-facebook"></i>Facebook</a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-pinterest"></i>Pinterest</a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-youtube"></i>YouTube</a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-google"></i>Google+</a>
-                  </li>
-                </div>
-              </ul>
-            </div>
-          </ul>
+        <div class="large-3 medium-6 small-12 columns no-padding-right">
+          <div class="row collapse">
+            <ul class="no-bullet small-12 columns no-margin-bottom">
+              <li class="header">
+                FOLLOW US
+              </li>
+            </ul>
+            <ul class="no-bullet small-6 columns">
+              <li>
+                <a href="#"><i class="fa fa-envelope"></i>Newsletter</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-instagram"></i>Instagram</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-twitter"></i>Twitter</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-tumblr"></i>Tumblr</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-linkedin"></i>LinedIn</a>
+              </li>
+            </ul>
+            <ul class="no-bullet small-6 columns">
+              <li>
+                <a href="#"><i class="fa fa-facebook"></i>Facebook</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-pinterest"></i>Pinterest</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-youtube"></i>YouTube</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-google"></i>Google+</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="small-12 medium-3 columns">
+        <div class="large-3 medium-12 small-12 columns">
           <ul class="no-bullet">
             <li class="header">
               JOB ALERT
