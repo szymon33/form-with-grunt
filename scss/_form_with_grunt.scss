@@ -266,11 +266,12 @@ body {
   }
 }
 
-button.file-upload {
-  position: relative;
-  overflow: hidden;
-  margin: 0;
-
+.file-upload {
+  button {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+  }
   input.file-input {
     cursor: pointer;
     position: absolute;
