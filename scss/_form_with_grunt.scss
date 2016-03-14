@@ -1,21 +1,11 @@
 $font-color: #666666;
 $bg-color: #f7f7f7;
 $hairine-color: #eaeaea;
-$error-color: #f04124;
+$button-bg: #fafafa;
+$error-color: #c80000;
 
 //
-// General
-//
-
-body {
-  button.small, .button.small {
-    padding: 0.625em 1.25em 0.6875em 1.25em;
-    font-size: 0.8125em;
-  }
-}
-
-//
-// Menu
+// Top Bar
 //
 
 h1#logo a {
@@ -26,27 +16,12 @@ h1#logo a {
   background: url('../images/logo.gif') no-repeat 0 0 scroll;
 }
 
-li.name { float: left; }
-
 nav.top-bar {
-  &.small {
-    height: 2.8125em;
-    opacity: 0.9;
-    @media only screen { opacity: initial; }
-  }
-
-  &.large {
-    padding-top: 1em;
-    height: 4.8125em;
-  }
-
-  ul li > a { font-size: 1em; }
-
-  li.toggle-topbar.menu-icon {
-    position: absolute;
-    left: 0;
-    right: auto;
-    top: 0;
+  ul li > a { 
+    font-size: 1em;
+    @media only screen and (max-width: 40em) {
+      font-size: 0.8125rem;
+    }
   }
 
   .top-bar-section li:not(.has-form).active a:not(.button) {
@@ -59,31 +34,72 @@ nav.top-bar {
   }
 
   .search {
-    input { border-right: 0; }
+    input {
+      background-color: $button-bg;
+      border: 0;
+      box-shadow: none;
+    }
+
     a.button {
       color: $font-color;
-      border: 1px solid rgb(198, 198, 198);
-      border-left: 0;
-      width: 2.142857143em;
-      padding-left: 0.8em;
-      margin: 0;
-      background: #fafafa;
+      background-color: $button-bg;
+      border: 0;
+      .fa.fa-search {
+        position: relative;      
+        left: -6px;
+        top: -2px;
+       }
     }
   }
 
-  .button.suitcase {
-    background: transparent;
-    span { padding-left: .5em; }
-    &:hover { background: transparent; }
+  li.suitcase {
+    background: none;
+    > a.button {
+      background: none;
+      > span { padding-left: .5em; }
+      &:hover { background: transparent; }
+    }
+  }
+
+  .has-form { background: black; }
+
+  // ZF Fixes for small
+  @media only screen and (max-width: 40em) {
+
+    height: 5.5625em;
+
+    .toggle-topbar.menu-icon {
+      position: absolute;
+      left: -0.6875em;
+      top: 50%;
+      right: auto;
+      margin-top: -1em;
+    }
+
+    .name { margin-left: 2.75em; }
+
+    li.suitcase {
+      position: absolute;
+      top: -3em;
+      right: 0;
+      a.button { font-size: 1.25em; }
+    }
+
+    .top-bar-section ul.right > li { padding: .5em; }
+
+    .search a.button {
+      height: 2.33333333333333em;
+      top: 0;
+    }
   }
 }
+
 
 //
 // Header
 //
 
 header {
-  color: white;
   font-size: 40px;
 
   background: url('../images/background_photo.png') no-repeat 0 0 scroll;
@@ -162,6 +178,11 @@ section.readmore {
   background-position: center center;
   padding-top: 4.0625em;
   padding-bottom: 4.0625em;
+
+  @media only screen and (max-width: 40em) { // dorobic medium tez
+    padding: 2em 1em;
+  }
+
   .row {
     background: $bg-color;
     padding: 1em 1em 2.5em 1em;
@@ -214,8 +235,15 @@ footer.footer {
 }
 
 //
-// Custom stuff
+// Common stuff
 //
+
+body {
+  button.small, .button.small {
+    padding: 0.625em 1.25em 0.6875em 1.25em;
+    font-size: 0.8125em;
+  }
+}
 
 button.file-upload {
   position: relative;
@@ -234,12 +262,10 @@ button.file-upload {
   }
 }
 
-.no-padding-right {
-  padding-right: 0 !important;
-}
+.no-padding-right { padding-right: 0 !important; }
 
 input:not([type]), input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
-  &.custom-error { 
+  &.custom-error {
     border: 1px solid $error-color;
     margin-bottom: 0;
   }
