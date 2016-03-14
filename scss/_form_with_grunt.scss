@@ -10,17 +10,30 @@ $footer-bg: white;
 //
 
 h1#logo a {
-  width: 4.52941176470588em;
-  height: 2.64705882352941em;
+  width: 77px;
+  height: 45px;
   display: block;
   text-indent: -9999px;
   background: url('../images/logo.gif') no-repeat 0 0 scroll;
 }
 
 nav.top-bar {
+  @media only screen and (min-width: 64.063em) {
+    &.small {
+      height: 2.8125em;
+      opacity: 0.9;
+      @media only screen { opacity: initial; }
+    }
+
+    &.large {
+      padding-top: 1em;
+      height: 4.8125em;
+    }
+  }
+
   ul li > a { 
     font-size: 1em;
-    @media only screen and (max-width: 40em) {
+    @media only screen and (max-width: 64.063em) {
       font-size: 0.8125rem;
     }
   }
@@ -46,10 +59,10 @@ nav.top-bar {
       background-color: $button-bg;
       border: 0;
       .fa.fa-search {
-        position: relative;      
+        position: relative;
         left: -6px;
         top: -2px;
-       }
+      }
     }
   }
 
@@ -65,7 +78,7 @@ nav.top-bar {
   .has-form { background: black; }
 
   // ZF Fixes for small
-  @media only screen and (max-width: 40em) {
+  @media only screen and (max-width: 800px) {
 
     height: 5.5625em;
 
@@ -113,7 +126,7 @@ header {
       line-height: 1em;
       font-size: 60px;
 
-      @media only screen { font-size: 1em; }
+      @media only screen { font-size: 0.9em; }
     }
 
     h3 {
@@ -181,6 +194,8 @@ section.readmore {
 
   h3 {
     padding-bottom: 1em;
+
+    @media only screen and (max-width: 64em) { font-size: 1em; }
   }
 
   a.send-us-email { text-decoration: underline; }
@@ -191,8 +206,8 @@ section.readmore {
   padding-top: 4.0625em;
   padding-bottom: 4.0625em;
 
-  @media only screen and (max-width: 40em) {
-    padding: 2em 1em;
+  @media only screen and (max-width: 64em) {
+    padding: 1em;
   }
 }
 
@@ -263,7 +278,7 @@ footer.footer {
 
 body {
   button.small, .button.small {
-    padding: 0.625em 1.25em 0.6875em 1.25em;
+    padding: 0.625em 0 0.6875em 0;
     font-size: 0.8125em;
   }
 }

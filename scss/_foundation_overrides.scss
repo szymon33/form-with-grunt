@@ -3,6 +3,7 @@
 $row-width: 60em;
 $font-family-sans-serif: Lato, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 $body-font-color: #666666;
+$anchor-font-color: #aaaaaa;
 $primary-color: $body-font-color;
 $body-bg: #f7f7f7;
 $topbar-bg-color: black;
@@ -11,6 +12,7 @@ $topbar-bg: $topbar-bg-color;
 $topbar-link-bg-active: black;
 $topbar-link-bg-hover: black;
 $topbar-link-bg-active-hover: black;
+$topbar-breakpoint: 800px;
 
 $topbar-menu-link-color-toggled: white;
 $topbar-menu-icon-color-toggled: white;
