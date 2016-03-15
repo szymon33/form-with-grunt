@@ -1,16 +1,13 @@
 # Gruntfile
 module.exports = (grunt) ->
 
-  # Project configuration.
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
 
-    #uglify:
-    #  dist:
-    #    src: ['js/libs/*' 'js/app.js'] # input
-    #    dest: 'javascripts/global.min.js' #output
-    #
-    #
+    uglify:
+     dist:
+       src: ['js/validator.js', 'js/app.js', 'js/dropbox.js']
+       dest: 'dist/js/global.min.js'
 
     copy:
       jquery:
@@ -57,8 +54,6 @@ module.exports = (grunt) ->
         ]
 
     slim:
-      options:
-        pretty: true
       dist:
         files: [
           expand: true
@@ -74,7 +69,7 @@ module.exports = (grunt) ->
         flatten: true
         cwd: 'coffee'
         src: ['*.coffee']
-        dest: 'dist/js'
+        dest: 'js'
         ext: '.js'
 
     watch:
@@ -82,9 +77,13 @@ module.exports = (grunt) ->
         livereload: true
         spawn: false
 
-      js:
+      coffee:
         files: 'coffee/*.coffee'
         tasks: ['coffee']
+
+      js:
+        files: 'js/*.js'
+        tasks: ['uglify']
 
       sass:
         files: 'scss/*.scss'
@@ -107,4 +106,4 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks('grunt-contrib-watch')
 
   # Default task(s).
-  grunt.registerTask('default', ['copy','sass', 'coffee', 'slim'])
+  grunt.registerTask('default', ['sass', 'coffee', 'slim', 'uglify', 'copy'])
