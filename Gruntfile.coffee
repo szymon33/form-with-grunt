@@ -45,6 +45,8 @@ module.exports = (grunt) ->
 
     sass:
       dist:
+        options:
+          style: 'compressed'
         files: [
           expand: true
           cwd: 'scss'
