@@ -9,10 +9,17 @@ section.apply-form
         label.required.strong Personal details
     .row
       .medium-6.large-6.columns
-        label
-          input type="text" name="firstname" placeholder="First Name" required=true
+        input type="text" name="firstname" placeholder="First Name" required=true
       .medium-6.large-6.columns
         input type="text" name="lastname" placeholder="Last Name" required=true
+    .row
+      .medium-6.large-6.columns
+        input type="radio" name="gender" value="Male" id="genderMale" checked=true
+        label for="genderMale" Male
+        input type="radio" name="gender" value="Female" id="genderFemale"
+        label for="genderFemale" Female
+      .medium-6.large-6.columns
+        input type="text" name="dateofbirth" placeholder="Date of Birth" required=true
     .row
       .medium-6.large-6.columns
         input type="text" name="address" placeholder="Address" required=true address=true
