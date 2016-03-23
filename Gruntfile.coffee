@@ -8,6 +8,9 @@ module.exports = (grunt) ->
       dist:
         src: ['js/validator.js', 'js/app.js', 'js/dropbox.js']
         dest: 'dist/js/global.min.js'
+      modernizr:
+        src: 'js/modernizr.js'
+        dest: 'dist/js/modernizr.min.js'
 
     copy:
       jquery:
@@ -19,7 +22,7 @@ module.exports = (grunt) ->
       foundation:
        files: [
            { expand: true, cwd: 'bower_components/foundation/js/', src: 'foundation.min.js', dest: 'dist/js/' }
-           { expand: true, cwd: 'bower_components/modernizr/', src: 'modernizr.js', dest: 'dist/js/' }
+           { expand: true, cwd: 'bower_components/modernizr/', src: 'modernizr.js', dest: 'js/' }
            { expand: true, cwd: 'bower_components/foundation/scss/foundation/', src: '_functions.scss', dest: 'scss/foundation/' }
            { expand: true, cwd: 'bower_components/foundation/js/foundation/', src: 'foundation.reveal.js', dest: 'dist/js/' }
           ]
