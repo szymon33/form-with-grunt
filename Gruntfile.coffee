@@ -5,9 +5,9 @@ module.exports = (grunt) ->
     pkg: grunt.file.readJSON('package.json')
 
     uglify:
-     dist:
-       src: ['js/validator.js', 'js/app.js', 'js/dropbox.js']
-       dest: 'dist/js/global.min.js'
+      dist:
+        src: ['js/validator.js', 'js/app.js', 'js/dropbox.js']
+        dest: 'dist/js/global.min.js'
 
     copy:
       jquery:
