@@ -20,15 +20,18 @@ h1#logo a {
 nav.top-bar {
   @media only screen and (min-width: 64.063em) {
     &.small {
-      height: 2.8125em;
-      opacity: 0.9;
-      @media only screen { opacity: initial; }
+      padding-top: 0;
+      height: 45px;
+      opacity: 0.85;
     }
 
-    &.large {
-      padding-top: 1em;
-      height: 4.8125em;
-    }
+    padding-top: 1em;
+    height: 4.8125em;
+
+    -moz-transition: padding-top .5s ease-in, height .5s ease-in;
+    -o-transition: padding-top .5s ease-in, height .5s ease-in;
+    -webkit-transition: padding-top .5s ease-in, height .5s ease-in;
+    transition: padding-top .5s ease-in, height .5s ease-in;
   }
 
   ul li > a { 

@@ -52,7 +52,7 @@ On smaller screens and on mobile devices, the menu will slide in and out from th
 * responsive top bar with hamburger on the left
 * Dropbox (link with Dropbox API)
 * popup message containing the name of candidate appears when submit form
-* parallax main menu (shrink)
+* CSS animated main menu (shrink) when user scroll
 * Back to top link is an animation
 * custom (hardcoded) form validations, just to show some javascript.
 

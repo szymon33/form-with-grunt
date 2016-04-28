@@ -9,9 +9,9 @@ $(document).foundation()
 jQuery ->
   $(document).on "scroll", ->
     if $(@).scrollTop() > 100
-      $(".top-bar").removeClass("large").addClass("small")
+      $(".top-bar").addClass("small")
     else
-      $(".top-bar").removeClass("small").addClass("large")
+      $(".top-bar").removeClass("small")
 
 #
 # Thank you for apply modal
